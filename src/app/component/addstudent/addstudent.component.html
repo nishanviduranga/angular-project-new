@@ -1,0 +1,24 @@
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="wrapper fadeInDown">
+
+  <div id="formContent">
+    <div class="fadeIn first">
+      Insert Student Details
+    </div>
+
+    <!-- Signin Form -->
+    <form>
+
+
+      <input type="text" id="ID" class="fadeIn second" name="ID" [(ngModel)]="newStudent.id" placeholder="Student ID"  required="required">
+      <input type="text" id="name" class="fadeIn third" name="name" [(ngModel)]="newStudent.name" placeholder="Student Name" required="required">
+      <input type="text" id="age" class="fadeIn third" name="age" maxlength="3" [(ngModel)]="newStudent.age" placeholder="Student Age" required="required">
+      <input type="text" id="telephoneNumber" ng-pattern=[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3} class="fadeIn fourth" name="telephoneNumber" [(ngModel)]="newStudent.telephoneNumber" placeholder="Student Phone Number" required="required">
+      <input type="text" id="address" class="fadeIn fourth" name="address" [(ngModel)]="newStudent.address" placeholder="Student Address" required="required">
+
+      <input type="submit" class="fadeIn fourth" (click)="save()" value="Update">
+    </form>
+  </div>
+</div>
+

@@ -1,0 +1,53 @@
+<li class="nav-item" Search result>Students Profile
+  <form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="text" [(ngModel)]="searchID" name="searchId" placeholder="Search">
+    <button class="btn btn-secondary my-2 my-sm-0" (click)="viewStudent()"type="submit">Search</button>
+  </form>
+</li>
+<div class="container">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Student ID</th>
+      <th>Student Name</th>
+      <th>Student Age</th>
+      <th>Student TelephoneNumber</th>
+      <th>Student Address</th>
+    </tr>
+    </thead>
+    <tbody *ngIf="newStudent != null">
+    <tr>
+      <td>{{ newStudent.id }}</td>
+      <td>{{ newStudent.name }}</td>
+      <td>{{ newStudent.age }}</td>
+      <td>{{ newStudent.telephoneNumber }}</td>
+      <td>{{ newStudent.address }}</td>
+      <td><button routerLink="/update" type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Tooltip on top">Edit</button>
+      <td><button  type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="" (click)="DeleteUser()" data-original-title="Tooltip on top">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+<hr>
+    <h1>All Student Details</h1>
+    <thead>
+    <tr>
+      <th>Student ID</th>
+      <th>Student Name</th>
+      <th>Student Age</th>
+      <th>Student TelephoneNumber</th>
+      <th>Student Address</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let student of studentList">
+      <td>{{ student.id }}</td>
+      <td>{{ student.name }}</td>
+      <td>{{ student.age }}</td>
+      <td>{{ student.telephoneNumber }}</td>
+      <td>{{ student.address }}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+

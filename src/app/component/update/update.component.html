@@ -1,0 +1,24 @@
+
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      Update Student Details
+    </div>
+
+    <!-- Signin Form -->
+    <form>
+      <input type="text" id="ID" class="fadeIn second" name="ID" [(ngModel)]="updatedStudent.id"  placeholder="Student ID">
+      <input type="text" id="Name" class="fadeIn third" name="Name" [(ngModel)]="updatedStudent.name" placeholder="Student Name">
+      <input type="text" id="Age" class="fadeIn third" name="Age" [(ngModel)]="updatedStudent.age" placeholder="Student Age">
+      <input type="text" id="Phone" class="fadeIn second" name="Phone" [(ngModel)]="updatedStudent.telephoneNumber" placeholder="Student Phone Number">
+      <input type="text" id="address" class="fadeIn third" name="address" [(ngModel)]="updatedStudent.address" placeholder="Student Address">
+
+      <input type="submit" class="fadeIn fourth" (click)="updateStudent()" value="Update">
+    </form>e
+  </div>
+</div>
